@@ -23,8 +23,8 @@ function ui:Win(Title, Subtitle)
     TitleBar.BackgroundColor3 = Color3.fromRGB(30, 144, 255)
     TitleBar.Text = Title .. " - " .. Subtitle
     TitleBar.TextColor3 = Color3.fromRGB(255, 255, 255)
-    TitleBar.TextFont = Enum.Font.Code -- Set font to Code
-    TitleBar.TextSize = 20 -- Set text size to 20
+    TitleBar.Font = Enum.Font.Code
+    TitleBar.TextSize = 20
     
     DestroyButton.Parent = MainFrame
     DestroyButton.Size = UDim2.new(0.1, 0, 0.1, 0)
@@ -32,8 +32,8 @@ function ui:Win(Title, Subtitle)
     DestroyButton.Text = "X"
     DestroyButton.TextColor3 = Color3.fromRGB(255, 255, 255)
     DestroyButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-    DestroyButton.TextFont = Enum.Font.Code -- Set font to Code
-    DestroyButton.TextSize = 20 -- Set text size to 20
+    DestroyButton.Font = Enum.Font.Code
+    DestroyButton.TextSize = 20
     DestroyButton.MouseButton1Click:Connect(function()
         ScreenGui:Destroy()
     end)
@@ -63,8 +63,8 @@ function ui:Win(Title, Subtitle)
         TabButton.Text = TabName
         TabButton.TextColor3 = Color3.fromRGB(255, 255, 255)
         TabButton.BackgroundColor3 = Color3.fromRGB(30, 144, 255)
-        TabButton.TextFont = Enum.Font.Code -- Set font to Code
-        TabButton.TextSize = 20 -- Set text size to 20
+        TabButton.Font = Enum.Font.Code
+        TabButton.TextSize = 20
         
         local TabFrame = Instance.new("ScrollingFrame")
         TabFrame.Parent = MainFrame
@@ -94,8 +94,8 @@ function ui:Win(Title, Subtitle)
             Button.Text = params.Name
             Button.TextColor3 = Color3.fromRGB(255, 255, 255)
             Button.BackgroundColor3 = Color3.fromRGB(70, 130, 180)
-            Button.TextFont = Enum.Font.Code -- Set font to Code
-            Button.TextSize = 20 -- Set text size to 20
+            Button.Font = Enum.Font.Code
+            Button.TextSize = 20
 
             Button.MouseButton1Click:Connect(function()
                 params.Callback()
@@ -112,8 +112,8 @@ function ui:Win(Title, Subtitle)
             Label.Text = Text
             Label.TextColor3 = Color3.fromRGB(255, 255, 255)
             Label.BackgroundColor3 = Color3.fromRGB(30, 144, 255)
-            Label.TextFont = Enum.Font.Code -- Set font to Code
-            Label.TextSize = 20 -- Set text size to 20
+            Label.Font = Enum.Font.Code
+            Label.TextSize = 20
 
             Tab.NextPositionY = Tab.NextPositionY + 0.1
         end
@@ -126,8 +126,8 @@ function ui:Win(Title, Subtitle)
             TextBox.Text = params.Placeholder or ""
             TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
             TextBox.BackgroundColor3 = Color3.fromRGB(70, 130, 180)
-            TextBox.TextFont = Enum.Font.Code -- Set font to Code
-            TextBox.TextSize = 20 -- Set text size to 20
+            TextBox.Font = Enum.Font.Code
+            TextBox.TextSize = 20
 
             local previousText = TextBox.Text
             TextBox.Changed:Connect(function()
@@ -148,8 +148,8 @@ function ui:Win(Title, Subtitle)
             ToggleButton.Text = params.Name .. ": OFF"
             ToggleButton.TextColor3 = Color3.fromRGB(255, 255, 255)
             ToggleButton.BackgroundColor3 = Color3.fromRGB(30, 144, 255)
-            ToggleButton.TextFont = Enum.Font.Code -- Set font to Code
-            ToggleButton.TextSize = 20 -- Set text size to 20
+            ToggleButton.Font = Enum.Font.Code
+            ToggleButton.TextSize = 20
 
             local isToggled = false
             ToggleButton.MouseButton1Click:Connect(function()
